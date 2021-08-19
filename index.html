@@ -68,28 +68,31 @@
         <!-- Top content -->
         <div class="top-content">
             <div class="container">
-
-                <div class="row">
+              <form class="needs-validation" novalidate>
+                <div class="form-row">
                     <div class="col-md-8 offset-md-2 text">
                         <h1 class="wow fadeInLeftBig">Pixel Protos</h1>
                         <div class="description wow fadeInLeftBig">
                         	<p>
-                         NFT's by controlplus
+                         a unique collection by controlplus
                         	</p>
                         </div>
                         <div class="top-big-link wow fadeInUp">
                         	<button id="mint" class="btn btn-primary" type="submit">Mint It!</button>
                         	<a class="btn btn-primary btn-link-2 scroll-link" href="#about-us">Learn more</a>
                         </div>
-                        <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroup-sizing-default">Amount</span>
-                      </div>
-                      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                      </div>
+                        <div class="col-md-4 offset-md-4 wow fadeInLeft">
+                          <input type="text" class="form-control" id="mintValidation" placeholder="ETH" value="" required>
+                          <div class="valid-feedback">
+                            Enjoy!
+                          </div>
+                          <div class="invalid-feedback">
+                            Error. Needs gas.
+                          </div>
+                        </div>
                     </div>
                 </div>
-
+              </form>
             </div>
         </div>
 
