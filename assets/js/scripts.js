@@ -58,7 +58,7 @@ function mintPixel() {
       window.ethereum.request({method: 'eth_requestAccounts'}).then(function() {
 
         const contractWithSigner = contract.connect(signer);
-        contractWithSigner.mintChip(quantity, {value: price}).then(function() {
+        contractWithSigner.mintPixel(quantity, {value: price}).then(function() {
           alert("You just minted some Pixel Protos! You should see them in your wallet soon!")
         }).catch(function(e) {
           alert("TX Failed");
