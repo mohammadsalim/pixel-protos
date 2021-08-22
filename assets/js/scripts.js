@@ -12,7 +12,7 @@ function scroll_to(clicked_link, nav_height) {
 }
 
 // JavaScript for disabling form submissions if there are invalid fields
-(function() {
+/* (function() {
   'use strict';
   window.addEventListener('load', function() {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -29,6 +29,7 @@ function scroll_to(clicked_link, nav_height) {
     });
   }, false);
 })();
+*/
 
 //JavaScript for smart contract and mint button
 const defaultProvider = ethers.getDefaultProvider()
