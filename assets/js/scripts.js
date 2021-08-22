@@ -47,24 +47,19 @@ const defaultProvider = ethers.getDefaultProvider()
        }
   	});
 
+	function mintPixel() {
+		     const price = ethers.utils.parseUnits("0.02", 18);
+		      let amount = document.getElementById("amount").value;
+		         const userProvider = new ethers.providers.Web3Provider(window.ethereum)
+		         const signer = userProvider.getSigner()
+		       window.ethereum.request({method: 'eth_requestAccounts'}).then(function() {
 
-
-function mintPixel() {
-  	const price = ethers.utils.parseUnits("0.02", 18);
-     let amount = document.getElementById("amount").value;
-     let quantity = price * amount;
-        const userProvider = new ethers.providers.Web3Provider(window.ethereum)
-        const signer = userProvider.getSigner()
-      window.ethereum.request({method: 'eth_requestAccounts'}).then(function() {
-
-        const contractWithSigner = contract.connect(signer);
-        contractWithSigner.mintPixel(quantity, {value: price}).then(function() {
-          alert("You just minted some Pixel Protos! You should see them in your wallet soon!")
-        }).catch(function(e) {
-          alert("TX Failed");
-        })
-      })
-}
+		         const contractWithSigner = contract.connect(signer);
+		         contractWithSigner.mintPixel(amount, {value: price.mul(amount)}).then(function() {
+		           alert("You just minted some Pixel Protos! You should see them in your wallet soon!")
+		         })
+		       })
+		 }
 
 //Dynamic
 jQuery(document).ready(function() {
