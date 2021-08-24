@@ -1,4 +1,3 @@
-
 @media (min-width: 992px) and (max-width: 1199px) {
 
 	.services-box .services-box-icon { width: 60px; height: 60px; font-size: 32px; line-height: 60px; border-radius: 22px; }
@@ -55,7 +54,7 @@
 
 	.portfolio-box { text-align: center; }
 	.portfolio-box-image { max-width: 540px; margin: 0 auto; }
-	
+
 	.blog-box { text-align: center; }
 	.blog-box-image { max-width: 540px; margin: 0 auto; }
 	.blog-box h3 { margin-top: 30px; }
