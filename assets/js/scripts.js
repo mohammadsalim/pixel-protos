@@ -43,7 +43,7 @@ const defaultProvider = ethers.getDefaultProvider()
 
 	 contract.totalSupply().then(value => {
        if (document.getElementById("counter")) {
-			         document.getElementById("counter").innerHTML = value.toString() + "/6200 Pixel Protos have been minted!";
+			         document.getElementById("counter").innerHTML = value.toString() + "/2800 Pixel Protos have been minted!";
                document.getElementById("counter").style.fontSize = "x-large";
 
        }
