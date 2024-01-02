@@ -1,465 +1,694 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-    <head>
+    <title>Pixel Protos</title>
 
-		<!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/media-queries.css" />
 
-        <title>Pixel Protos</title>
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.png" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="assets/ico/apple-touch-icon-144-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="assets/ico/apple-touch-icon-114-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="assets/ico/apple-touch-icon-72-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="assets/ico/apple-touch-icon-57-precomposed.png"
+    />
 
-        <!-- CSS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&family=VT323&display=swap" rel="stylesheet">
-		    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/css/animate.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/media-queries.css">
+    <!-- Javascript -->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/f595b96b3f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/retina-1.1.0.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+  </head>
 
-        <!-- Favicon and touch icons -->
-        <link rel="shortcut icon" href="assets/ico/favicon.png">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-
-        <!-- Javascript -->
-        <script src="assets/js/jquery-3.2.1.min.js"></script>
-        <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
-        <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/f595b96b3f.js" crossorigin="anonymous"></script>
-        <script src="assets/js/jquery.backstretch.min.js"></script>
-        <script src="assets/js/wow.min.js"></script>
-        <script src="assets/js/retina-1.1.0.min.js"></script>
-        <script src="assets/js/waypoints.min.js"></script>
-        <script src="assets/js/scripts.js"></script>
-
-    </head>
-
-    <body>
-
-		<!-- Top menu -->
-		<nav class="navbar navbar-dark fixed-top navbar-expand-md navbar-no-bg">
-			<div class="container">
-				<a class="navbar-brand" href="index.html">Pixel Protos by controlplus</a>
-			    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			        <span class="navbar-toggler-icon"></span>
-			    </button>
-			    <div class="collapse navbar-collapse" id="navbarNav">
-			        <ul class="navbar-nav ml-auto">
-			            <li class="nav-item">
-			                <a class="nav-link scroll-link" href="#top-content">Top</a>
-			            </li>
-                  <li class="nav-item">
-                      <a class="nav-link scroll-link" href="#about-us">About</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link scroll-link" href="#roadmap">Roadmap</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link scroll-link" href="#services">More</a>
-                  </li>
-			            <li class="nav-item">
-			                <a class="nav-link scroll-link" href="#portfolio">Brand</a>
-			            </li>
-			            <li class="nav-item">
-			                <a class="nav-link scroll-link" href="#blog">Charity</a>
-			            </li>
-                  <!-- <li class="nav-item">
+  <body>
+    <!-- Top menu -->
+    <nav class="navbar navbar-dark fixed-top navbar-expand-md navbar-no-bg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          >Pixel Protos by controlplus</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="ml-auto navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link scroll-link" href="#top-content">Top</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll-link" href="#about-us">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll-link" href="#roadmap">Roadmap</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll-link" href="#services">More</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll-link" href="#portfolio">Brand</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll-link" href="#blog">Charity</a>
+            </li>
+            <!-- <li class="nav-item">
                       <a class="nav-link scroll-link" href="#"><i class="fab fa-discord"></i></a>
                   </li> -->
-			        </ul>
-			    </div>
-		    </div>
-		</nav>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-        <!-- Top content -->
-        <div class="top-content">
-            <div class="container">
-                <div class="form-row">
-                    <div class="col-md-8 offset-md-2 text">
-                        <h1 class="wow fadeInLeftBig text-shadow">Pixel Protos</h1>
-                        <div class="description wow fadeInLeftBig">
-                        	<p class="text-shadow" id="counter">
-                        	</p>
-                        </div>
-                        <div class="col-md-4 offset-md-4 top-big-link wow fadeInUp">
-                          <button class="button btn btn-success btn-lg" id="mint1" onclick="mintPixel()" type="submit">Mint Pixels</button>
-                          <input type="number" class="form-control" id="amount" name="quantity" placeholder="Select # of Pixels" min="1" max="20">
-                        </div>
-                        <div class="wow fadeInLeft">
-                          <a class="btn btn-dark btn-link-2 scroll-link" href="#about-us">Learn more</a>
-                        </div>
-                    </div>
-                </div>
+    <!-- Top content -->
+    <div class="top-content">
+      <div class="container">
+        <div class="form-row">
+          <div class="col-md-8 offset-md-2 text">
+            <h1 class="wow fadeInLeftBig text-shadow">Pixel Protos</h1>
+            <div class="description wow fadeInLeftBig">
+              <p class="text-shadow" id="counter"></p>
             </div>
-        </div>
-
-        <!-- About us -->
-        <div class="about-us-container section-container section-container-gray-bg">
-	        <div class="container">
-	            <div class="row">
-	            	<div class="col-12 col-lg-7 about-us-box wow fadeInLeft">
-	                    <div class="about-us-box-text">
-	                    	<h3>About Pixel Protos</h3>
-	                    	<p class="medium-paragraph">
-                          What are Pixel Protos?
-                          Pixel Protos are a collection of 2800 cute fun and cool Robots inspired by our original character prototype001 living on their own smart contract! There is a variety of cool traits including one special trait based on our puppy Nocciola! This trait is very personal and is the reason we decided to partner with <a href="https://www.koreank9rescue.org/">Korean K9 Rescue</a> . More details on them below.
-	                    	</p>
-	                    	<p>
-                          How much does it cost to mint?
-                          Each Pixel Proto will be .02 ETH.
-	                    	</p>
-	                    	<p>
-                          How many are reserved for giveaways etc?
-                          There are 80 Pixel Protos being held on reserve for giveaways. Keep an eye out for them!
-	                    	</p>
-	                    </div>
-	                </div>
-	                <div class="col-12 col-lg-5 about-us-box wow fadeInUp">
-                    <div class="portfolio-box-image">
-	                		<img src="assets/img/protopixel.gif" alt="" data-at2x="assets/img/protopixel.gif">
-	                	</div>
-	                </div>
-	            </div>
-              <div class="row">
-                <div class="col section-bottom-button wow fadeInUp">
-                        <a class="scroll-link btn btn-primary btn-link-3" href="#top-content">Mint Pixel Protos</a>
-                </div>
-              </div>
-	        </div>
-        </div>
-
-        <!-- Timeline -->
-
-        <div class="roadmap-container container">
-          <div class="row">
-              <div class="col more-services section-description wow fadeIn">
-                  <h2>Roadmap</h2>
-                  <div class="divider-1 wow fadeInUp"><span></span></div>
-              </div>
+            <div class="col-md-4 offset-md-4 top-big-link wow fadeInUp">
+              <button
+                class="button btn btn-success btn-lg"
+                id="mint1"
+                onclick="mintPixel()"
+                type="submit"
+              >
+                Mint Pixels
+              </button>
+              <input
+                type="number"
+                class="form-control"
+                id="amount"
+                name="quantity"
+                placeholder="Select # of Pixels"
+                min="1"
+                max="20"
+              />
+            </div>
+            <div class="wow fadeInLeft">
+              <a class="btn btn-dark btn-link-2 scroll-link" href="#about-us"
+                >Learn more</a
+              >
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About us -->
+    <div class="about-us-container section-container section-container-gray-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-7 about-us-box wow fadeInLeft">
+            <div class="about-us-box-text">
+              <h3>About Pixel Protos</h3>
+              <p class="medium-paragraph">
+                What are Pixel Protos? Pixel Protos are a collection of 2800
+                cute fun and cool Robots inspired by our original character
+                prototype001 living on their own smart contract! There is a
+                variety of cool traits including one special trait based on our
+                puppy Nocciola! This trait is very personal and is the reason we
+                decided to partner with
+                <a href="https://www.koreank9rescue.org/">Korean K9 Rescue</a> .
+                More details on them below.
+              </p>
+              <p>
+                How much does it cost to mint? Each Pixel Proto will be .02 ETH.
+              </p>
+              <p>
+                How many are reserved for giveaways etc? There are 80 Pixel
+                Protos being held on reserve for giveaways. Keep an eye out for
+                them!
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 about-us-box wow fadeInUp">
+            <div class="portfolio-box-image">
+              <img
+                src="assets/img/protopixel.gif"
+                alt=""
+                data-at2x="assets/img/protopixel.gif"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col section-bottom-button wow fadeInUp">
+            <a
+              class="scroll-link btn btn-primary btn-link-3"
+              href="#top-content"
+              >Mint Pixel Protos</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+
+    <div class="container roadmap-container">
+      <div class="row">
+        <div class="col more-services section-description wow fadeIn">
+          <h2>Roadmap</h2>
+          <div class="divider-1 wow fadeInUp"><span></span></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="main-timeline">
+            <div class="timeline wow fadeInRight">
+              <div class="timeline-icon">
+                <a href=""><i class="fab fa-discord"></i></a>
+              </div>
+              <div class="timeline-content">
+                <h3 class="title">10% of sales</h3>
+                <p class="description">
+                  The discord server will be open to the public. This is not
+                  only the Pixel Protos discord but the community discord for
+                  our brand ctrl+ (controlplus).
+                </p>
+              </div>
+            </div>
+            <a href="#" class="timeline wow fadeInLeft">
+              <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
+              <div class="timeline-content">
+                <h3 class="title">25% of sales</h3>
+                <p class="description">
+                  We will reveal the the first part of our secret airdrop to our
+                  holders! This means showing the community what is to come and
+                  asking if there is anything they would like to see!
+                </p>
+              </div>
+            </a>
+            <a href="#" class="timeline wow fadeInRight">
+              <div class="timeline-icon"><i class="fas fa-robot"></i></div>
+              <div class="timeline-content">
+                <h3 class="title">50% of sales</h3>
+                <p class="description">
+                  First reveal of the merchandise which will be available only
+                  to the holders of Pixel Protos via the discord. These pieces
+                  will be limited due to us not wanting to mass produce
+                  anything, and we never do with the brand either way. However
+                  this does not mean there will not be more gear coming that
+                  others can grab! 10% of these sales will also be donated to
+                  Korean K9 Rescue at the 50% mark. On top of this, we will be
+                  giving away some FREE crypto voxel wearables to our members to
+                  use in the online worlds!
+                </p>
+              </div>
+            </a>
+            <a href="#" class="timeline wow fadeInLeft">
+              <div class="timeline-icon"><i class="fas fa-dog"></i></div>
+              <div class="timeline-content">
+                <h3 class="title">75% of sales</h3>
+                <p class="description">
+                  A large donation will be given to Korean K9 Rescue from all of
+                  the sales earned so far. 10% to be exact.
+                </p>
+              </div>
+            </a>
+            <a href="#" class="timeline wow fadeInRight">
+              <div class="timeline-icon"><i class="fas fa-tshirt"></i></div>
+              <div class="timeline-content">
+                <h3 class="title">100% SOLD OUT</h3>
+                <p class="description">
+                  Merchandise store will be released for a limited time so
+                  holders can purchase some sick custom ctrl+ gear. All holders
+                  will be air dropped the new secret project which was revealed
+                  at the 50% mark in the discord. Finally, we will announce the
+                  next secret project. That we have been working on which our
+                  holders will get a first chance to grab!
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <!-- Call to action -->
+    <div
+      class="call-to-action-container section-container section-container-image-bg"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col call-to-action section-description wow fadeInLeft">
+            <p class="rounded bg-dark text-shadow">
+              Join the official ctrl+ discord server. A space to make many new
+              friends as well as grow with the brand and community!
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col section-bottom-button wow fadeInUp">
+            <a class="btn btn-primary btn-link-1 scroll-link" href="#roadmap"
+              >Discord <i class="fas fa-lock"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Brand -->
+    <div class="more-services-container section-container">
+      <div class="container">
+        <div class="row">
+          <div class="col more-services section-description wow fadeIn">
+            <h2>CTRL+</h2>
+            <div class="divider-1 wow fadeInUp"><span></span></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 more-services-box wow fadeInLeft">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="main-timeline">
-                        <div class="timeline wow fadeInRight">
-                            <div class="timeline-icon"><a href=""><i class="fab fa-discord"></i></a></div>
-                            <div class="timeline-content">
-                                <h3 class="title">10% of sales</h3>
-                                <p class="description">
-                                    The discord server will be open to the public. This is not only the Pixel Protos discord but the community discord for our brand ctrl+ (controlplus).
-                                </p>
-                            </div>
-                        </div>
-                        <a href="#" class="timeline wow fadeInLeft">
-                            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-                            <div class="timeline-content">
-                                <h3 class="title">25% of sales</h3>
-                                <p class="description">
-                                    We will reveal the the first part of our secret airdrop to our holders! This means showing the community what is to come and asking if there is anything they would like to see!
-                                </p>
-                            </div>
-                        </a>
-                        <a href="#" class="timeline wow fadeInRight">
-                            <div class="timeline-icon"><i class="fas fa-robot"></i></div>
-                            <div class="timeline-content">
-                                <h3 class="title">50% of sales</h3>
-                                <p class="description">
-                                    First reveal of the merchandise which will be available only to the holders of Pixel Protos via the discord. These pieces will be limited due to us not wanting to mass produce anything, and we never do with the brand either way. However this does not mean there will not be more gear coming that others can grab! 10% of these sales will also be donated to Korean K9 Rescue at the 50% mark. On top of this, we will be giving away some FREE crypto voxel wearables to our members to use in the online worlds!
-                                </p>
-                            </div>
-                        </a>
-                        <a href="#" class="timeline wow fadeInLeft">
-                            <div class="timeline-icon"><i class="fas fa-dog"></i></div>
-                            <div class="timeline-content">
-                                <h3 class="title">75% of sales</h3>
-                                <p class="description">
-                                    A large donation will be given to Korean K9 Rescue from all of the sales earned so far. 10% to be exact.
-                                </p>
-                            </div>
-                        </a>
-                        <a href="#" class="timeline wow fadeInRight">
-                            <div class="timeline-icon"><i class="fas fa-tshirt"></i></div>
-                            <div class="timeline-content">
-                                <h3 class="title">100% SOLD OUT</h3>
-                                <p class="description">
-	                                	Merchandise store will be released for a limited time so holders can purchase some sick custom ctrl+ gear. All holders will be air dropped the new secret project which was revealed at the 50% mark in the discord. Finally, we will announce the next secret project. That we have been working on which our holders will get a first chance to grab!
-                                </p>
-                            </div>
-                        </a>
-                    </div>
+              <div class="col-md-3">
+                <div class="portfolio-box-image">
+                  <img
+                    src="assets/img/Ctrlplusduo.gif"
+                    alt=""
+                    data-at2x="assets/img/Ctrlplusduo.gif"
+                  />
                 </div>
+              </div>
+              <div class="col-md-9">
+                <p>
+                  CTRL+ (control plus) was founded in 2015 by Roberto Rossellini
+                  and Kirsten Tanjutco. The concept of the brand is rooted in
+                  it’s mission to combine technology and originality within
+                  fashion.
+                </p>
+              </div>
             </div>
-        </div>
-        <hr>
-
-        <!-- Call to action -->
-            <div class="call-to-action-container section-container section-container-image-bg">
-    	        <div class="container">
-    	            <div class="row">
-    	                <div class="col call-to-action section-description wow fadeInLeft">
-    	                    <p class="bg-dark rounded text-shadow">
-    	                    	Join the official ctrl+ discord server. A space to make many new friends as well as grow with the brand and community!
-    	                    </p>
-    	                </div>
-    	            </div>
-    	            <div class="row">
-    	            	<div class="col section-bottom-button wow fadeInUp">
-                            <a class="btn btn-primary btn-link-1 scroll-link" href="#roadmap">Discord <i class="fas fa-lock"></i></a>
-    	            	</div>
-    	            </div>
-    	        </div>
+          </div>
+          <div class="col-md-6 more-services-box wow fadeInLeft">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="portfolio-box-image">
+                  <img
+                    src="assets/img/plant.gif"
+                    alt=""
+                    data-at2x="assets/img/plant.gif"
+                  />
+                </div>
+              </div>
+              <div class="col-md-9">
+                <p>
+                  Major companies often “Ctrl+C , Ctrl+V“ (copy and paste)
+                  existing concepts rather than creating original ideas. We
+                  decided to use the computer language of “CTRL+” to distinguish
+                  our brand’s mission of originality.
+                </p>
+              </div>
             </div>
-
-            <!-- Brand -->
-                <div class="more-services-container section-container">
-        	        <div class="container">
-
-        	            <div class="row">
-        	                <div class="col more-services section-description wow fadeIn">
-        	                    <h2>CTRL+</h2>
-        	                    <div class="divider-1 wow fadeInUp"><span></span></div>
-        	                </div>
-        	            </div>
-
-        	            <div class="row">
-        	                <div class="col-md-6 more-services-box wow fadeInLeft">
-        	                	<div class="row">
-        	                		<div class="col-md-3">
-                                <div class="portfolio-box-image">
-                                  <img src="assets/img/Ctrlplusduo.gif" alt="" data-at2x="assets/img/Ctrlplusduo.gif">
-                                </div>
-        	                		</div>
-        	                		<div class="col-md-9">
-        		                    	<p>
-                                    CTRL+ (control plus) was founded in 2015 by Roberto Rossellini and Kirsten Tanjutco. The concept of the brand is rooted in it’s mission to combine technology and originality within fashion.
-        		                    	</p>
-        	                		</div>
-        	                	</div>
-        	                </div>
-        	                <div class="col-md-6 more-services-box wow fadeInLeft">
-        	                	<div class="row">
-        	                		<div class="col-md-3">
-                                <div class="portfolio-box-image">
-                                  <img src="assets/img/plant.gif" alt="" data-at2x="assets/img/plant.gif">
-                                </div>
-        	                		</div>
-        	                		<div class="col-md-9">
-        		                    	<p>
-                                    Major companies often “Ctrl+C , Ctrl+V“ (copy and paste) existing concepts rather than creating original ideas. We decided to use the computer language of “CTRL+” to distinguish our brand’s mission of originality.
-        		                    	</p>
-        	                		</div>
-        	                	</div>
-        	                </div>
-        	            </div>
-
-        	            <div class="row">
-        	                <div class="col-md-6 more-services-box wow fadeInLeft">
-        	                	<div class="row">
-        	                		<div class="col-md-3">
-                                <div class="portfolio-box-image">
-                                  <img src="assets/img/Lab-ProtoLarge.gif" alt="" data-at2x="assets/img/Lab-ProtoLarge.gif">
-                                </div>
-        	                		</div>
-        	                		<div class="col-md-9">
-        		                    	<p>
-                                    CTRL+ challenges the norm through it’s unique animated series that showcases both clothing and figures that are physically available for purchase. We are redefining the industry by putting a story behind every article of clothing and artwork.
-        		                    	</p>
-        	                		</div>
-        	                	</div>
-        	                </div>
-        	                <div class="col-md-6 more-services-box wow fadeInLeft">
-        	                	<div class="row">
-        	                		<div class="col-md-3">
-                                <div class="portfolio-box-image">
-                                  <img src="assets/img/sleeping.gif" alt="" data-at2x="assets/img/sleeping.gif">
-                                </div>
-        	                		</div>
-        	                		<div class="col-md-9">
-        		                    	<p>
-                                    CTRL+ is currently launching it’s first Anime series as well as NFT’s, collectible figures, clothing and more. For more information follow @ctrlplus.nyc on Instagram
-        		                    	</p>
-        	                		</div>
-        	                	</div>
-        	                </div>
-        	            </div>
-
-        	        </div>
-                </div>
-
-
-        <!-- More Series -->
-        <div class="services-container section-container">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col services section-description wow fadeIn">
-	                    <h2>More from the series</h2>
-	                    <div class="divider-1 wow fadeInUp"><span></span></div>
-	                </div>
-	            </div>
-              <div class="row">
-                	<div class="col-md-4 portfolio-box wow fadeInUp">
-	                	<div class="portfolio-box-image">
-	                		<img src="assets/img/lonely.gif" alt="" data-at2x="assets/img/lonely.gif">
-	                	</div>
-                		<h3><a href="https://rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:1068742?tab=details">The Lonely City</a> <i class="fas fa-angle-right"></i></h3>
-                		<p>This is a 1/1 Collectible of my original character Prototype001 Number 4 of a 9 part series! Prototype001 belongs to the "old world" technology of the CTRL+ real. He holds the information behind all of sciences past discoveries, and is also what almost destroyed the world 2000 years ago.</p>
-                    </div>
-                    <div class="col-md-4 portfolio-box wow fadeInDown">
-	                	<div class="portfolio-box-image">
-	                		<img src="assets/img/Prototype001-Safari.jpeg" alt="" data-at2x="assets/img/Prototype001-Safari.jpeg">
-	                	</div>
-                		<h3><a href="https://rarible.com/token/0x7d594ed1a34c01a07201c92a29511199f02681ca:13?tab=details">Prototype001: Safari</a> <i class="fas fa-angle-right"></i></h3>
-                		<p>This is the eighth of a series of  variations of my original character protoype001. Each single 1/1 will be unique from the next. There are no attributes or stats per say EXCEPT if you collect 4 of these you have the opportunity to use your unlock to grab a protoype001 hand painted 1/1 figure as well as some cool gear from my clothing brand!</p>
-                    </div>
-                    <div class="col-md-4 portfolio-box wow fadeInUp">
-	                	<div class="portfolio-box-image">
-	                		<img src="assets/img/King-Proto.jpeg" alt="" data-at2x="assets/img/King-Proto.jpeg">
-	                	</div>
-                		<h3><a href="https://rarible.com/token/0x7d594ed1a34c01a07201c92a29511199f02681ca:16?tab=details">Prototype001: King Proto</a> <i class="fas fa-angle-right"></i></h3>
-                		<p>This is the tenth of a series of  variations of my original character protoype001. Each single 1/1 will be unique from the next. There are no attributes or stats per say EXCEPT if you collect 4 of these you have the opportunity to use your unlock to grab a protoype001 hand painted 1/1 figure as well as some cool gear from my clothing brand!</p>
-                    </div>
-	            </div>
-	        </div>
+          </div>
         </div>
 
-        <!-- Brand Work -->
-        <div class="portfolio-container section-container">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col portfolio section-description wow fadeIn">
-	                    <h2>Our Work</h2>
-	                    <div class="divider-1 wow fadeInUp"><span></span></div>
-	                    <p>We've been working on several projects since we started back in 2015. Check them out!</p>
-	                </div>
-	            </div>
-	            <div class="row">
-                	<div class="col-md-4 portfolio-box wow fadeInUp">
-	                	<div class="portfolio-box-image">
-	                		<img src="assets/img/Apparel.png" alt="" data-at2x="assets/img/Apparel.png">
-	                	</div>
-                  </div>
-                    <div class="col-md-4 portfolio-box wow fadeInDown">
-	                	<div class="portfolio-box-image">
-	                		<img src="assets/img/CTRL_PLUS_MANGA_PAGE.jpg" alt="" data-at2x="assets/img/CTRL_PLUS_MANGA_PAGE.jpg">
-	                	</div>
-                    </div>
-                    <div class="col-md-4 portfolio-box wow fadeInUp">
-	                	<div class="portfolio-box-image">
-	                		<img src="assets/img/group_shot.gif" alt="" data-at2x="assets/img/group_shot.gif">
-	                	</div>
-                    </div>
-	            </div>
-	        </div>
+        <div class="row">
+          <div class="col-md-6 more-services-box wow fadeInLeft">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="portfolio-box-image">
+                  <img
+                    src="assets/img/Lab-ProtoLarge.gif"
+                    alt=""
+                    data-at2x="assets/img/Lab-ProtoLarge.gif"
+                  />
+                </div>
+              </div>
+              <div class="col-md-9">
+                <p>
+                  CTRL+ challenges the norm through it’s unique animated series
+                  that showcases both clothing and figures that are physically
+                  available for purchase. We are redefining the industry by
+                  putting a story behind every article of clothing and artwork.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 more-services-box wow fadeInLeft">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="portfolio-box-image">
+                  <img
+                    src="assets/img/sleeping.gif"
+                    alt=""
+                    data-at2x="assets/img/sleeping.gif"
+                  />
+                </div>
+              </div>
+              <div class="col-md-9">
+                <p>
+                  CTRL+ is currently launching it’s first Anime series as well
+                  as NFT’s, collectible figures, clothing and more. For more
+                  information follow @ctrlplus.nyc on Instagram
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- More Series -->
+    <div class="services-container section-container">
+      <div class="container">
+        <div class="row">
+          <div class="col services section-description wow fadeIn">
+            <h2>More from the series</h2>
+            <div class="divider-1 wow fadeInUp"><span></span></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 portfolio-box wow fadeInUp">
+            <div class="portfolio-box-image">
+              <img
+                src="assets/img/lonely.gif"
+                alt=""
+                data-at2x="assets/img/lonely.gif"
+              />
+            </div>
+            <h3>
+              <a
+                href="https://rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:1068742?tab=details"
+                >The Lonely City</a
+              >
+              <i class="fas fa-angle-right"></i>
+            </h3>
+            <p>
+              This is a 1/1 Collectible of my original character Prototype001
+              Number 4 of a 9 part series! Prototype001 belongs to the "old
+              world" technology of the CTRL+ real. He holds the information
+              behind all of sciences past discoveries, and is also what almost
+              destroyed the world 2000 years ago.
+            </p>
+          </div>
+          <div class="col-md-4 portfolio-box wow fadeInDown">
+            <div class="portfolio-box-image">
+              <img
+                src="assets/img/Prototype001-Safari.jpeg"
+                alt=""
+                data-at2x="assets/img/Prototype001-Safari.jpeg"
+              />
+            </div>
+            <h3>
+              <a
+                href="https://rarible.com/token/0x7d594ed1a34c01a07201c92a29511199f02681ca:13?tab=details"
+                >Prototype001: Safari</a
+              >
+              <i class="fas fa-angle-right"></i>
+            </h3>
+            <p>
+              This is the eighth of a series of variations of my original
+              character protoype001. Each single 1/1 will be unique from the
+              next. There are no attributes or stats per say EXCEPT if you
+              collect 4 of these you have the opportunity to use your unlock to
+              grab a protoype001 hand painted 1/1 figure as well as some cool
+              gear from my clothing brand!
+            </p>
+          </div>
+          <div class="col-md-4 portfolio-box wow fadeInUp">
+            <div class="portfolio-box-image">
+              <img
+                src="assets/img/King-Proto.jpeg"
+                alt=""
+                data-at2x="assets/img/King-Proto.jpeg"
+              />
+            </div>
+            <h3>
+              <a
+                href="https://rarible.com/token/0x7d594ed1a34c01a07201c92a29511199f02681ca:16?tab=details"
+                >Prototype001: King Proto</a
+              >
+              <i class="fas fa-angle-right"></i>
+            </h3>
+            <p>
+              This is the tenth of a series of variations of my original
+              character protoype001. Each single 1/1 will be unique from the
+              next. There are no attributes or stats per say EXCEPT if you
+              collect 4 of these you have the opportunity to use your unlock to
+              grab a protoype001 hand painted 1/1 figure as well as some cool
+              gear from my clothing brand!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Brand Work -->
+    <div class="portfolio-container section-container">
+      <div class="container">
+        <div class="row">
+          <div class="col portfolio section-description wow fadeIn">
+            <h2>Our Work</h2>
+            <div class="divider-1 wow fadeInUp"><span></span></div>
+            <p>
+              We've been working on several projects since we started back in
+              2015. Check them out!
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 portfolio-box wow fadeInUp">
+            <div class="portfolio-box-image">
+              <img
+                src="assets/img/Apparel.png"
+                alt=""
+                data-at2x="assets/img/Apparel.png"
+              />
+            </div>
+          </div>
+          <div class="col-md-4 portfolio-box wow fadeInDown">
+            <div class="portfolio-box-image">
+              <img
+                src="assets/img/CTRL_PLUS_MANGA_PAGE.jpg"
+                alt=""
+                data-at2x="assets/img/CTRL_PLUS_MANGA_PAGE.jpg"
+              />
+            </div>
+          </div>
+          <div class="col-md-4 portfolio-box wow fadeInUp">
+            <div class="portfolio-box-image">
+              <img
+                src="assets/img/group_shot.gif"
+                alt=""
+                data-at2x="assets/img/group_shot.gif"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charity -->
+    <div class="blog-container section-container">
+      <div class="container">
+        <div class="row">
+          <div class="col blog section-description wow fadeIn">
+            <h2>Korean K9 Rescue</h2>
+            <div class="divider-1 wow fadeInUp"><span></span></div>
+          </div>
         </div>
 
-        <!-- Charity -->
-        <div class="blog-container section-container">
-	        <div class="container">
-
-	            <div class="row">
-	                <div class="col blog section-description wow fadeIn">
-	                    <h2>Korean K9 Rescue</h2>
-	                    <div class="divider-1 wow fadeInUp"><span></span></div>
-	                </div>
-	            </div>
-
-	            <div class="row">
-	                <div class="col-md-6 blog-box wow fadeInLeft">
-	                	<div class="row">
-	                		<div class="col-md-3">
-	                			<div class="blog-box-image">
-	                				<img src="assets/img/doggologo.jpeg" alt="" data-at2x="assets/img/doggologo.jpeg">
-	                			</div>
-	                		</div>
-	                		<div class="col-md-9">
-		                    	<p>
-		                    		Korean K9 Rescue is a non-profit, No-Kill 501(c)(3) dog rescue organization located in Queens, New York City and South Korea.
-		                    	</p>
-	                		</div>
-	                	</div>
-	                </div>
-	                <div class="col-md-6 blog-box wow fadeInLeft">
-	                	<div class="row">
-	                		<div class="col-md-3">
-	                			<div class="blog-box-image">
-	                				<img src="assets/img/doggoplaying.png" alt="" data-at2x="assets/img/doggoplaying.png">
-	                			</div>
-	                		</div>
-	                		<div class="col-md-9">
-		                    	<p>
-		                    		Korean K9 Rescue's facility in Bundang, South Korea houses dogs rescued from dog meat farms, high kill shelters, and strays. The adoption rate in Korea is less than 15% but it is significantly higher in the United States where we bring most of the dogs for adoption. Over 2,000 dogs have been rescued and successfully adopted through KK9R.
-		                    	</p>
-	                		</div>
-	                	</div>
-	                </div>
-	            </div>
-
-	            <div class="row">
-	                <div class="col-md-6 blog-box wow fadeInLeft">
-	                	<div class="row">
-	                		<div class="col-md-3">
-	                			<div class="blog-box-image">
-	                				<img src="assets/img/doggotraining.png" alt="" data-at2x="assets/img/doggotraining.png">
-	                			</div>
-	                		</div>
-	                		<div class="col-md-9">
-		                    	<p>
-		                    		At the Bundang facility, they provide health screenings for the dogs, agility courses, and have dedicated trainers to help with the Rehabilitation process before they are transported to NYC to find their furrever homes!
-		                    	</p>
-	                		</div>
-	                	</div>
-	                </div>
-	                <div class="col-md-6 blog-box wow fadeInLeft">
-	                	<div class="row">
-	                		<div class="col-md-3">
-	                			<div class="blog-box-image">
-	                				<img src="assets/img/shelterdogs.jpeg" alt="" data-at2x="assets/img/shelterdogs.jpeg">
-	                			</div>
-	                		</div>
-	                		<div class="col-md-9">
-		                    	<p>
-		                    		There are approximately 17,000 known dog meat farms in South Korea, but there could potentially be even more that are hidden from the public eye. The farms range from having a few dogs to having more than thousands of dogs. The dogs at these farms eat rotten food waste and live in wire cages with no protection from harsh weather conditions. In the majority of cases, the day that the dogs’ paws touch the ground for the first time is the same day that they are dragged off to the slaughterhouse.
-		                    	</p>
-	                		</div>
-	                	</div>
-	                </div>
-	            </div>
-
-	            <div class="row">
-	            	<div class="col section-bottom-button wow fadeInUp">
-                  <a class="btn btn-primary btn-link-3" href="https://www.koreank9rescue.org/mission/">Learn More</a>
-	            	</div>
-	            </div>
-
-	        </div>
+        <div class="row">
+          <div class="col-md-6 blog-box wow fadeInLeft">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="blog-box-image">
+                  <img
+                    src="assets/img/doggologo.jpeg"
+                    alt=""
+                    data-at2x="assets/img/doggologo.jpeg"
+                  />
+                </div>
+              </div>
+              <div class="col-md-9">
+                <p>
+                  Korean K9 Rescue is a non-profit, No-Kill 501(c)(3) dog rescue
+                  organization located in Queens, New York City and South Korea.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 blog-box wow fadeInLeft">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="blog-box-image">
+                  <img
+                    src="assets/img/doggoplaying.png"
+                    alt=""
+                    data-at2x="assets/img/doggoplaying.png"
+                  />
+                </div>
+              </div>
+              <div class="col-md-9">
+                <p>
+                  Korean K9 Rescue's facility in Bundang, South Korea houses
+                  dogs rescued from dog meat farms, high kill shelters, and
+                  strays. The adoption rate in Korea is less than 15% but it is
+                  significantly higher in the United States where we bring most
+                  of the dogs for adoption. Over 2,000 dogs have been rescued
+                  and successfully adopted through KK9R.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Footer -->
-        <footer>
-	        <div class="container">
-	        	<div class="row">
-                    <div class="col-md-5 footer-left">
-                    	<p>&copy; controlplus <a href="https://ctrlplus.nyc">CTRL+</a>.</p>
-                    </div>
-
-                    <div class="col-md-6 offset-md-1 footer-right">
-						          <a href="https://twitter.com/PixelProtos"><i class="fab fa-twitter"></i></a>
-						          <a href="https://www.instagram.com/ctrlplus.nyc/"><i class="fab fa-instagram"></i></a>
-						          <a class="scroll-link" href="#roadmap"><i class="fab fa-discord"></i></a>
-                    </div>
+        <div class="row">
+          <div class="col-md-6 blog-box wow fadeInLeft">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="blog-box-image">
+                  <img
+                    src="assets/img/doggotraining.png"
+                    alt=""
+                    data-at2x="assets/img/doggotraining.png"
+                  />
                 </div>
-                <div class="row">
-                	<div class="col footer-bottom">
-		           		<a class="scroll-link" href="#top-content"><i class="fas fa-chevron-up"></i></a>
-		           	</div>
+              </div>
+              <div class="col-md-9">
+                <p>
+                  At the Bundang facility, they provide health screenings for
+                  the dogs, agility courses, and have dedicated trainers to help
+                  with the Rehabilitation process before they are transported to
+                  NYC to find their furrever homes!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 blog-box wow fadeInLeft">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="blog-box-image">
+                  <img
+                    src="assets/img/shelterdogs.jpeg"
+                    alt=""
+                    data-at2x="assets/img/shelterdogs.jpeg"
+                  />
                 </div>
-	        </div>
-        </footer>
-    </body>
+              </div>
+              <div class="col-md-9">
+                <p>
+                  There are approximately 17,000 known dog meat farms in South
+                  Korea, but there could potentially be even more that are
+                  hidden from the public eye. The farms range from having a few
+                  dogs to having more than thousands of dogs. The dogs at these
+                  farms eat rotten food waste and live in wire cages with no
+                  protection from harsh weather conditions. In the majority of
+                  cases, the day that the dogs’ paws touch the ground for the
+                  first time is the same day that they are dragged off to the
+                  slaughterhouse.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="row">
+          <div class="col section-bottom-button wow fadeInUp">
+            <a
+              class="btn btn-primary btn-link-3"
+              href="https://www.koreank9rescue.org/mission/"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 footer-left">
+            <p>&copy; controlplus <a href="https://ctrlplus.nyc">CTRL+</a>.</p>
+          </div>
+
+          <div class="col-md-6 offset-md-1 footer-right">
+            <a href="https://twitter.com/PixelProtos"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="https://www.instagram.com/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a class="scroll-link" href="#roadmap"
+              ><i class="fab fa-discord"></i
+            ></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col footer-bottom">
+            <a class="scroll-link" href="#top-content"
+              ><i class="fas fa-chevron-up"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
